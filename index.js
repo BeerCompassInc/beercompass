@@ -14,7 +14,7 @@ document.querySelector('main').appendChild(initView)
 const initState = {
   title: 'Quickstart',
   route: '/',
-  lastRoute: null
+  lastRoute: 'lemon'
 }
 
 const { getState, dispatch, subscribe } = createStore(reducer, initState)
@@ -31,4 +31,4 @@ subscribe(() => {
   update(initView, newView)
 })
 
-dispatch({type: 'INIT'})
+dispatch({type: 'lemon'})

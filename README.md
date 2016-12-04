@@ -2,6 +2,8 @@
 
 yo-yo redux sheet-router
 
+using the lemon placeholder system
+
 ##demo
 
 https://bradymat.github.io/quickstart/
@@ -21,11 +23,10 @@ npm install
 ```
 npm start
 ```
+live reloading app at `http://localhost:9966/`
 
 ### deploy
 
 ```
 npm run deploy
 ```
-
-live reloading app at `http://localhost:9966/`

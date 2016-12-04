@@ -2,6 +2,10 @@
 
 yo-yo redux sheet-router
 
+##demo
+
+https://bradymat.github.io/quickstart/
+
 [![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 
 ### install
@@ -16,6 +20,12 @@ npm install
 
 ```
 npm start
+```
+
+### deploy
+
+```
+npm run deploy
 ```
 
 live reloading app at `http://localhost:9966/`

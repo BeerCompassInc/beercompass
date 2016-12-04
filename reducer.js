@@ -1,14 +1,11 @@
 module.exports = (state, action) => {
-  const newState = require('clone')(state)
   const { type, payload } = action
   switch (type) {
     case 'INIT':
-      return newState
+      return { ...state }
     case 'CHANGE_ROUTE':
-      newState.lastRoute = newState.route
-      newState.route = payload
-      return newState
+      return { ...state, lastRoute: state.route, route: payload }
     default:
-      return newState
+      return { ...state }
   }
 }

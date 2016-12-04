@@ -22,4 +22,10 @@ npm install
 npm start
 ```
 
+### deploy
+
+```
+npm run deploy
+```
+
 live reloading app at `http://localhost:9966/`

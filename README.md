@@ -2,6 +2,8 @@
 
 yo-yo redux sheet-router
 
+[![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
+
 ### install
 
 ```

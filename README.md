@@ -10,7 +10,7 @@ cd quickstart
 npm install
 ```
 
-## development
+### development
 
 ```
 npm start

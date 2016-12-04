@@ -26,8 +26,8 @@ const route = Router({ default: '/404' }, [
 ])
 
 subscribe(() => {
-  const Component = route(getState().route)
-  const newView = Component(getState(), dispatch)
+  const state = getState()
+  const newView = route(state.route)(state, dispatch)
   update(initView, newView)
 })
 

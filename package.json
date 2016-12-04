@@ -1,5 +1,5 @@
 {
-  "name": "yopro",
+  "name": "quickstart",
   "version": "1.0.0",
   "description": "yoyo redux",
   "main": "index.js",
@@ -18,14 +18,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/bradymat/yopro"
+    "url": "https://github.com/bradymat/quickstart"
   },
   "author": "bradymat",
   "license": "Motosoto",
   "bugs": {
-    "url": "https://github.com/bradymat/yopro/issues"
+    "url": "https://github.com/bradymat/quickstart/issues"
   },
-  "homepage": "https://github.com/bradymat/yopro",
+  "homepage": "https://github.com/bradymat/quickstart",
   "devDependencies": {
     "clone": "^2.1.0",
     "redux": "^3.6.0",

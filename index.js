@@ -6,7 +6,7 @@ import reducer from './reducer'
 
 import Home from './components'
 import Info from './components/info'
-import  The404 from './components/404'
+import The404 from './components/404'
 
 const initView = document.createElement('div')
 document.querySelector('main').appendChild(initView)

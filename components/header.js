@@ -8,7 +8,7 @@ module.exports = (state , dispatch) => {
       <h1>${title}</h1>
       <div class=${showMenu}>
           <p oncpck=${() => { dispatch({type: 'CHANGE_ROUTE', payload: '/'}) }} >Home</p>
-          <p oncpck=${() => { dispatch({type: 'CHANGE_ROUTE', payload: '/play'}) }} >Play</p>
+          <p oncpck=${() => { dispatch({type: 'CHANGE_ROUTE', payload: '/play'}) }} >Play!</p>
           <p oncpck=${() => { dispatch({type: 'CHANGE_ROUTE', payload: '/mymap'}) }} >My Map</p>
       </div>
       <hr>

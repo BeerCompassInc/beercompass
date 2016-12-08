@@ -1,39 +1,23 @@
 body {
-  background-color: #2b2b2b;
-  color: white;
-  text-align: center;
   margin: 0 auto;
   max-width: 432px;
-  max-height: 768px; }
-
-li {
-  list-style: none; }
+  max-height: 768px;
+}
 
 main {
-  text-align: center; }
+  text-align: center;
+}
 
 .hidden {
   height: 0px;
-  overflow: hidden; }
+  overflow: hidden;
+}
 
 .menu {
-  height: auto; }
+  position: absolute;
+  height: auto;
+}
 
 button {
-  cursor: pointer; }
-
-img {
-  width: 20%; }
-
-.hideMenu {
-  height: 0px;
-  overflow: hidden; }
-
-.showMenu {
-  width: 80vw;
-  position: absolute;
-  height: 100vh;
-  background-color: black;
-  color: #FFF; }
-
-/*# sourceMappingURL=index.css.map */
+  cursor: pointer;
+}

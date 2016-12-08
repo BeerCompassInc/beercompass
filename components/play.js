@@ -7,10 +7,6 @@ module.exports = (state, dispatch) => html`
     <div>
       ${header(state, dispatch)}
       ${button('back', dispatch, 'CHANGE_ROUTE', '/')}
-      <h3>Technologies used</h3>
-      <p>${link('yo-yo', 'https://www.npmjs.com/package/yo-yo')}</p>
-      <p>${link('sheet-router', 'https://www.npmjs.com/package/sheet-router')}</p>
-      <p>${link('redux', 'https://www.npmjs.com/package/redux')}</p>
-      ${button('lemon', dispatch, 'CHANGE_ROUTE', '/lemon')}
+      ${button('play', dispatch, 'CHANGE_ROUTE', '/map')}
     </div>
   `

@@ -5,7 +5,8 @@ import Router from 'sheet-router'
 import reducer from './reducer'
 
 import Login from './components'
-import Play from './components/info'
+import Play from './components/play'
+import MyMap from './components/mymap'
 import The404 from './components/404'
 
 const initView = document.createElement('div')
@@ -21,7 +22,8 @@ const { getState, dispatch, subscribe } = createStore(reducer, initState)
 
 const route = Router({ default: '/404' }, [
   ['/', (params) => Login],
-  ['/info', (params) => Play],
+  ['/play', (params) => Play],
+  ['/mymap', (params) => MyMap],
   ['/404', (params) => The404]
 ])
 

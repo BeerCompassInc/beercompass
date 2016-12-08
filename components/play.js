@@ -3,14 +3,21 @@ import header from './header'
 import button from './buttons/custom'
 import link from './buttons/link'
 
-module.exports = (state, dispatch) => html`
+module.exports = (state, dispatch) => {
+  const goToMap = () => {
+    dispatch({type: 'CHANGE_ROUTE', payload: '/mymap'})
+  }
+  return html`
     <div>
       ${header(state, dispatch)}
       ${button('back', dispatch, 'CHANGE_ROUTE', '/')}
-      <h3>Technologies used</h3>
-      <p>${link('yo-yo', 'https://www.npmjs.com/package/yo-yo')}</p>
-      <p>${link('sheet-router', 'https://www.npmjs.com/package/sheet-router')}</p>
-      <p>${link('redux', 'https://www.npmjs.com/package/redux')}</p>
-      ${button('lemon', dispatch, 'CHANGE_ROUTE', '/lemon')}
+      <svg onclick=${goToMap} viewBox="0 0 58 58" style="enable-background:new 0 0 58 58;">
+        <circle style="fill:#EBBA16;" cx="14.5" cy="14.5" r="14.5"/>
+        <g>
+        	<polygon style="fill:#FFFFFF;" points="22,14.5 11,22 11,14.6 11,7  "/>
+
+        </g>
+      </svg>
     </div>
   `
+}

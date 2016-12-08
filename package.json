@@ -4,7 +4,9 @@
   "description": "yoyo redux",
   "main": "index.js",
   "scripts": {
-    "start": "budo . -d --serve bundle.js --live",
+    "start": "concurrently \"npm run watch:sass\" \"npm run serve:client\"",
+    "watch:sass": "sass --watch input.scss:output.css",
+    "serve:client": "budo . -d --serve bundle.js --live",
     "build": "browserify . -o bundle.js -g uglifyify",
     "test": "browserify test/index.js | node | tap-spec",
     "dist": "mkdir -p dist && bash -c 'cp *.{js,html,css} dist'",
@@ -32,6 +34,7 @@
     "babelify": "^7.2.0",
     "browserify": "^13.0.0",
     "budo": "^9.2.2",
+    "concurrently": "^3.1.0",
     "gh-pages": "^0.11.0",
     "redux": "^3.6.0",
     "sheet-router": "^4.1.1",

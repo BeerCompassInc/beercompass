@@ -6,8 +6,13 @@ body {
 main {
   text-align: center;
 }
+.hidden{
+  height: 0px;
+  overflow: hidden;
+}
 .menu{
-  cursor: pointer;
+  position: absolute;
+  height: auto;
 }
 button{
   cursor: pointer;

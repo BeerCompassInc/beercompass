@@ -4,6 +4,9 @@ module.exports = (state, { type, payload }) => {
       return { ...state, lastRoute: state.route, route: payload, showMenu: false }
     case 'SHOW_MENU':
       return { ...state, showMenu: !state.showMenu }
+    case 'UPDATE_LOGIN_DETAILS':
+      state.loginDetails[payload.change] = payload.value 
+      return { ...state }
     default:
       return { ...state }
   }

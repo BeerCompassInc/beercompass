@@ -5,6 +5,7 @@ import Router from 'sheet-router'
 import reducer from './reducer'
 
 import Login from './components'
+import SignUp from './components/signUp'
 import Play from './components/play'
 import MyMap from './components/mymap'
 import The404 from './components/404'
@@ -15,13 +16,15 @@ document.querySelector('main').appendChild(initView)
 const initState = {
   title: 'Quickstart',
   route: '/',
-  lastRoute: 'lemon'
+  lastRoute: 'lemon',
+  loginDetails: null
 }
 
 const { getState, dispatch, subscribe } = createStore(reducer, initState)
 
 const route = Router({ default: '/404' }, [
   ['/', (params) => Login],
+  ['/signUp', (params) => SignUp],
   ['/play', (params) => Play],
   ['/mymap', (params) => MyMap],
   ['/404', (params) => The404]

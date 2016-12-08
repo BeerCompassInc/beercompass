@@ -3,17 +3,27 @@ import header from './header'
 import link from './buttons/link'
 
 module.exports = (state, dispatch) => {
-  function authorizeGoogle() {
-    dispatch({type: 'CHANGE_ROUTE', payload: '/play'})
+  function goToSignUp() {
+    dispatch({type: 'CHANGE_ROUTE', payload: '/signUp'})
   }
-  function authorizeFacebook() {
-    dispatch({type: 'CHANGE_ROUTE', payload: '/play'})
+
+  function saveUsername(e) {
+    dispatch({type: 'UPDATE_LOGIN_DETAILS', payload: {change: 'username', value: e.target.value}})
   }
+
+  function savePassword() {
+    dispatch({type: 'UPDATE_LOGIN_DETAILS', payload: {change: 'password', value: e.target.value}})
+  }
+  console.log(state.loginDetails);
   return html`
     <div class='login'>
       ${header(state, dispatch)}
-      <img onclick=${authorizeGoogle} src="../images/g-icon.png">
-      <img onclick=${authorizeFacebook} src="../images/fb-icon.png">
+      <form>
+        <input onchange=${(e) => saveUsername(e) } type="text" placeholder="username"/>
+        <input onchange=${savePassword} type="password" placeholder="password" />
+        <button type="submit">Login</button>
+      </form>
+      <button onclick=${goToSignUp}>Create Account</button>
     </div>
   `
 }

@@ -5,6 +5,8 @@ module.exports = ({ title }, dispatch) => html`
     <h1>${title}</h1>
     <p class='menu' onclick=${() => { dispatch({type: 'CHANGE_ROUTE', payload: '/'}) }} >Home</p>
     <p class='menu' onclick=${() => { dispatch({type: 'CHANGE_ROUTE', payload: '/play'}) }} >Play</p>
+    <p class='menu' onclick=${() => { dispatch({type: 'CHANGE_ROUTE', payload: '/mymap'}) }} >My Map</p>
     <hr>
   </div>
 `
+ 

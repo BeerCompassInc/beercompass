@@ -1,29 +1,39 @@
+$primary-color: #F7BA7B
+$text: 'Raleway', sans-serif
+$header: 'Palanquin Dark', sans-serif
+
 body
-  background-color: #2b2b2b
-  color: white
+  background-color: #000
   text-align: center
   margin: 0 auto
   max-width: 432px
   max-height: 768px
+  font-family: $text
+  font-weight: 600px
 
-li
-  list-style: none
+h1, h2, h3, h4, h5, h6
+  font-family: $header
+  font-weight: 700px
 
 main
   text-align: center
 
-.hidden
-  height: 0px
-  overflow: hidden
-
-.menu
-  height: auto
-
 button
+  background-color: $primary-color
+  border: none
   cursor: pointer
 
 img
   width: 20%
+
+.header
+  display: flex
+
+.logo
+  position: absolute
+  color: $primary-color
+  order: 2
+  width: 100%
 
 .hideMenu
   height: 0px
@@ -33,5 +43,25 @@ img
   width: 80vw
   position: absolute
   height: 100vh
-  background-color: black
-  color: #FFF
+  background-color: #404247
+  color: $primary-color
+  ul
+    height: 100vh
+    margin-top: 30%
+    padding: 0px
+  li
+    height: 30px
+    margin-top: 25px
+    padding-bottom: 2px
+    list-style: none
+    border-bottom: 1px solid #E2E2E2
+
+.menuButton
+  z-index: 3
+  fill: #FFF
+  width: 50px
+  position: absolute
+  order: 1
+
+.play
+  width: 250px

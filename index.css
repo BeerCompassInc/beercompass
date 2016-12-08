@@ -25,4 +25,15 @@ button {
 img {
   width: 20%; }
 
+.hideMenu {
+  height: 0px;
+  overflow: hidden; }
+
+.showMenu {
+  width: 80vw;
+  position: absolute;
+  height: 100vh;
+  background-color: black;
+  color: #FFF; }
+
 /*# sourceMappingURL=index.css.map */

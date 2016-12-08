@@ -2,13 +2,20 @@ import html from 'yo-yo'
 import header from './header'
 import link from './buttons/link'
 
-module.exports = (state, dispatch) => html
-  `
+module.exports = (state, dispatch) => {
+  function authorizeGoogle() {
+    dispatch({type: 'CHANGE_ROUTE', payload: '/play'})
+  }
+  function authorizeFacebook() {
+    dispatch({type: 'CHANGE_ROUTE', payload: '/play'})
+  }
+  return html`
     <div>
       ${header(state, dispatch)}
       <img src="../images/compass-icon.png">
       <h1>Beer Compass</h1>
-      <a href="https://www.google.com" alt="google login oauth" title="google login"><img src="../images/g-icon.png"></a>
-      <a href="https://www.facebook.com" alt="facebook login oauth" title="facebook login"><img src="../images/fb-icon.png"></a>
+      <img onclick=${authorizeGoogle} src="../images/g-icon.png">
+      <img onclick=${authorizeFacebook} src="../images/fb-icon.png">
     </div>
   `
+}

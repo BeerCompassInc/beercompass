@@ -7,7 +7,7 @@ import request from 'superagent'
 module.exports = (state, dispatch) => {
 
   request
-    .get('https://maps.googleapis.com/maps/api/js?key=AIzaSyDNqZpfY5wCQjq78QqttpZJ05714XxQTuI&callback=initMap')
+    .get('https://maps.googleapis.com/maps/api/js?key=KEY-HERE&callback=initMap')
     .end((err, res) => {
       var map;
       function initMap() {

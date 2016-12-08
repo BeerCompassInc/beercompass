@@ -10,10 +10,8 @@ module.exports = (state, dispatch) => {
     dispatch({type: 'CHANGE_ROUTE', payload: '/play'})
   }
   return html`
-    <div>
+    <div class='login'>
       ${header(state, dispatch)}
-      <img src="../images/compass-icon.png">
-      <h1>Beer Compass</h1>
       <img onclick=${authorizeGoogle} src="../images/g-icon.png">
       <img onclick=${authorizeFacebook} src="../images/fb-icon.png">
     </div>

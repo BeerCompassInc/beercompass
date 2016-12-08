@@ -7,11 +7,9 @@ module.exports = (state , dispatch) => {
     <div>
       <h1>${title}</h1>
       <div class=${showMenu}>
-        <ul>
-          <li onclick=${() => { dispatch({type: 'CHANGE_ROUTE', payload: '/'}) }} >Home</li>
-          <li onclick=${() => { dispatch({type: 'CHANGE_ROUTE', payload: '/play'}) }} >Play</li>
-          <li onclick=${() => { dispatch({type: 'CHANGE_ROUTE', payload: '/mymap'}) }} >My Map</li>
-        </ul>
+          <p oncpck=${() => { dispatch({type: 'CHANGE_ROUTE', payload: '/'}) }} >Home</p>
+          <p oncpck=${() => { dispatch({type: 'CHANGE_ROUTE', payload: '/play'}) }} >Play</p>
+          <p oncpck=${() => { dispatch({type: 'CHANGE_ROUTE', payload: '/mymap'}) }} >My Map</p>
       </div>
       <hr>
     </div>

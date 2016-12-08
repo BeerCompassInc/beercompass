@@ -11,10 +11,10 @@ module.exports = (state, dispatch) => {
     <div>
       ${header(state, dispatch)}
       ${button('back', dispatch, 'CHANGE_ROUTE', '/')}
-      <svg onclick=${goToMap} viewBox="0 0 58 58" style="enable-background:new 0 0 58 58;">
-        <circle style="fill:#EBBA16;" cx="14.5" cy="14.5" r="14.5"/>
+      <svg class="svg" onclick=${goToMap} viewBox="0 0 40 40" >
+        <circle style="fill:#EBBA16;" cx="20" cy="20" r="20"/>
         <g>
-        	<polygon style="fill:#FFFFFF;" points="22,14.5 11,22 11,14.6 11,7  "/>
+        	<polygon style="fill:#FFFFFF;" points="30,20 15,30 15,19 15,9.7  "/>
 
         </g>
       </svg>

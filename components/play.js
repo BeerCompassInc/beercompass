@@ -15,7 +15,6 @@ module.exports = (state, dispatch) => {
         <circle style="fill:#EBBA16;" cx="20" cy="20" r="20"/>
         <g>
         	<polygon style="fill:#FFFFFF;" points="30,20 15,30 15,19 15,9.7  "/>
-
         </g>
       </svg>
     </div>

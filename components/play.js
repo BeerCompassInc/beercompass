@@ -10,12 +10,14 @@ module.exports = (state, dispatch) => {
   return html`
     <div>
       ${header(state, dispatch)}
+      <div class='playContainer'>
       <svg class="play" onclick=${goToMap} viewBox="0 0 40 40" >
-        <circle style="fill:#F7BA7B;" cx="20" cy="20" r="20"/>
+        <circle class='circle' cx="20" cy="20" r="20"/>
         <g>
-        	<polygon style="fill:#000;" points="30,20 15,30 15,19 15,9.7  "/>
+        	<polygon class='poly' points="30,20 15,30 15,19 15,9.7  "/>
         </g>
       </svg>
+      </div>
     </div>
   `
 }

@@ -8,6 +8,7 @@ body {
   font-weight: 600px; }
 
 h1, h2, h3, h4, h5, h6 {
+  margin: 0;
   font-family: "Palanquin Dark", sans-serif;
   font-weight: 700px; }
 
@@ -19,19 +20,31 @@ button {
   border: none;
   cursor: pointer; }
 
-img {
+.login img {
   width: 20%; }
 
 .header {
   display: flex; }
+  .header h1 {
+    font-size: 50px; }
+  .header img {
+    margin-top: 20px;
+    width: 20%; }
+
+.menuButton {
+  z-index: 3;
+  fill: #FFF;
+  width: 50px;
+  position: absolute;
+  order: 1; }
 
 .logo {
-  position: absolute;
   color: #F7BA7B;
   order: 2;
   width: 100%; }
 
 .hideMenu {
+  position: absolute;
   height: 0px;
   overflow: hidden; }
 
@@ -52,14 +65,13 @@ img {
     list-style: none;
     border-bottom: 1px solid #E2E2E2; }
 
-.menuButton {
-  z-index: 3;
-  fill: #FFF;
-  width: 50px;
-  position: absolute;
-  order: 1; }
-
-.play {
-  width: 250px; }
+.playContainer {
+  margin-top: 100px; }
+  .playContainer .play {
+    width: 250px; }
+    .playContainer .play .circle {
+      fill: #F7BA7B; }
+    .playContainer .play .poly {
+      fill: #000; }
 
 /*# sourceMappingURL=index.css.map */

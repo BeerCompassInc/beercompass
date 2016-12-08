@@ -1,5 +1,7 @@
 body {
   margin: 0 auto;
+  max-width: 432px;
+  max-height: 768px;
 }
 main {
   text-align: center;

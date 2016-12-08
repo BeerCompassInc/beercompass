@@ -1,19 +1,9 @@
 body {
-  margin: 0 auto;
-  max-width: 432px;
-  max-height: 768px;
-}
-main {
-  text-align: center;
-}
-.hidden{
-  height: 0px;
-  overflow: hidden;
-}
-.menu{
-  position: absolute;
-  height: auto;
-}
-button{
-  cursor: pointer;
-}
+  background-color: #2b2b2b;
+  color: white;
+  text-align: center; }
+
+li {
+  list-style: none; }
+
+/*# sourceMappingURL=index.css.map */

@@ -6,13 +6,16 @@ body {
 main {
   text-align: center;
 }
-.hidden{
+.hideMenu{
   height: 0px;
   overflow: hidden;
 }
-.menu{
+.showMenu{
+  width: 80vw;
   position: absolute;
-  height: auto;
+  height: 100vh;
+  background-color: black;
+  color: #FFF;
 }
 button{
   cursor: pointer;

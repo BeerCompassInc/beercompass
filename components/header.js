@@ -10,11 +10,12 @@ module.exports = (state , dispatch) => {
       <rect x='1' y='1.2' width='5' height='0.7' rx='0.25' ry='0.25'/>
       <rect x='1' y='2.9' width='5' height='0.7' rx='0.25' ry='0.25'/>
     </svg>`
+  const checkRouteForLogo = route == '/mymap' ? 'hideLogo' : 'showLogo'
   return html`
     <div class='header'>
       ${checkIfLoggedIn()}
       <div class='logo'>
-        <img src="../images/compass-icon.png">
+        <img class=${checkRouteForLogo} src="../images/compass-icon.png">
         <h1>Beer Compass</h1>
       </div>
       <div class=${customClass}>

@@ -15,8 +15,7 @@ document.querySelector('main').appendChild(initView)
 const initState = {
   title: 'Quickstart',
   route: '/',
-  lastRoute: 'lemon',
-  showMenu: false
+  lastRoute: 'lemon'
 }
 
 const { getState, dispatch, subscribe } = createStore(reducer, initState)

@@ -10,9 +10,9 @@ module.exports = (state , dispatch) => {
       <button onclick=${toggleMenu}>Show</button>
       <div class=${customClass}>
         <ul>
-          <li onclick=${() => { dispatch({type: 'CHANGE_ROUTE', payload: '/'}) }} >Home</li>
-          <li onclick=${() => { dispatch({type: 'CHANGE_ROUTE', payload: '/play'}) }} >Play</li>
-          <li onclick=${() => { dispatch({type: 'CHANGE_ROUTE', payload: '/mymap'}) }} >My Map</li>
+          <p onclick=${() => { dispatch({type: 'CHANGE_ROUTE', payload: '/'}) }} >Home</p>
+          <p onclick=${() => { dispatch({type: 'CHANGE_ROUTE', payload: '/play'}) }} >Play</p>
+          <p onclick=${() => { dispatch({type: 'CHANGE_ROUTE', payload: '/mymap'}) }} >My Map</p>
         </ul>
       </div>
       <hr>

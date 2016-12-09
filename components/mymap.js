@@ -12,7 +12,7 @@ module.exports = (state, dispatch) => {
     <div>
       ${header(state, dispatch)}
       <h1>MAP</h1>
-      ${getMap(document.getElementById('mapDiv'))}
+      ${getMap())}
     </div>
   `
 }

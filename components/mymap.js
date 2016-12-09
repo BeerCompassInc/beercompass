@@ -5,6 +5,7 @@ import link from './buttons/link'
 import getMap from '../js/index'
 
 module.exports = (state, dispatch) => {
+
   return html`
     <div>
       ${header(state, dispatch)}

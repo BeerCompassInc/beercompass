@@ -15,7 +15,7 @@ module.exports = (state , dispatch) => {
     <div class='header'>
       ${checkIfLoggedIn()}
       <div class='logo'>
-        <img class=${checkRouteForLogo} src="../images/compass-icon.png">
+        <img class=${checkRouteForLogo} src="https://cloud.githubusercontent.com/assets/20106637/21035471/34ff658c-be24-11e6-9874-bb9852786797.png">
         <h1>Beer Compass</h1>
       </div>
       <div class=${customClass}>

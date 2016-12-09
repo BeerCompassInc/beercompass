@@ -1,8 +1,7 @@
-import html from 'yo-yo'
-import header from './header'
-import link from './buttons/link'
+import React from 'react'
+import Header from './header'
 
-module.exports = (state, dispatch) => {
+module.exports = ({state, dispatch}) => {
 
   const goToSignUp = () => dispatch({type: 'CHANGE_ROUTE', payload: '/signUp'})
 
@@ -14,16 +13,15 @@ module.exports = (state, dispatch) => {
     e.preventDefault()
     dispatch({type: 'CHANGE_ROUTE', payload: '/play'})
 }
-
-  return html`
-    <div class='login'>
-      ${header(state, dispatch)}
+  return(
+    <div className='login'>
+      <Header state={state} dispatch={dispatch}/>
       <form>
-        <input onchange=${(e) => saveUsername(e) } type="text" placeholder="username"/>
-        <input onchange=${(e) => savePassword(e) } type="password" placeholder="password" />
-        <button onclick=${(e) => login(e)} type="submit">Login</button>
+        <input onChange={(e) => saveUsername(e) } type="text" placeholder="username"/>
+        <input onChange={(e) => savePassword(e) } type="password" placeholder="password" />
+        <button onClick={(e) => login(e)} type="submit">Login</button>
       </form>
-      <button onclick=${goToSignUp}>Create Account</button>
+      <button onClick={goToSignUp}>Create Account</button>
     </div>
-  `
+  )
 }

@@ -1,5 +1,6 @@
+import React from 'react'
+import { render } from 'react-dom'
 import { createStore } from 'redux'
-import { update } from 'yo-yo'
 import Router from 'sheet-router'
 
 import reducer from './reducer'
@@ -8,13 +9,9 @@ import Login from './components'
 import SignUp from './components/signUp'
 import Play from './components/play'
 import MyMap from './components/mymap'
-import The404 from './components/404'
-
-const initView = document.createElement('div')
-document.querySelector('main').appendChild(initView)
 
 const initState = {
-  title: 'Quickstart',
+  title: 'Beercompass',
   route: '/',
   lastRoute: 'lemon',
   loginDetails: {},
@@ -27,14 +24,12 @@ const route = Router({ default: '/404' }, [
   ['/', (params) => Login],
   ['/signUp', (params) => SignUp],
   ['/play', (params) => Play],
-  ['/mymap', (params) => MyMap],
-  ['/404', (params) => The404]
+  ['/mymap', (params) => MyMap]
 ])
 
 subscribe(() => {
-  const state = getState()
-  const newView = route(state.route)(state, dispatch)
-  update(initView, newView)
+  var Component = route(getState().route)
+  render(<Component state={getState()} dispatch={dispatch}/> , document.querySelector('main'))
 })
 
 dispatch({type: 'lemon'})

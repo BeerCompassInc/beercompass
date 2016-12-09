@@ -1,23 +1,21 @@
-import html from 'yo-yo'
-import header from './header'
-import button from './buttons/custom'
-import link from './buttons/link'
+import React from 'react'
+import Header from './header'
 
-module.exports = (state, dispatch) => {
+module.exports = ({state, dispatch}) => {
   const goToMap = () => {
     dispatch({type: 'CHANGE_ROUTE', payload: '/mymap'})
   }
-  return html`
+  return(
     <div>
-      ${header(state, dispatch)}
-      <div class='playContainer'>
-      <svg class="play" onclick=${goToMap} viewBox="0 0 40 40" >
-        <circle class='circle' cx="20" cy="20" r="20"/>
+      <Header state={state} dispatch={dispatch}/>
+      <div className='playContainer'>
+      <svg className="play" onClick={goToMap} viewBox="0 0 40 40" >
+        <circle className='circle' cx="20" cy="20" r="20"/>
         <g>
-        	<polygon class='poly' points="30,20 15,30 15,19 15,9.7  "/>
+        	<polygon className='poly' points="30,20 15,30 15,19 15,9.7  "/>
         </g>
       </svg>
       </div>
     </div>
-  `
+  )
 }

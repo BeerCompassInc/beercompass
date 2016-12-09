@@ -1,7 +1,6 @@
 module.exports = (state, { type, payload }) => {
   switch (type) {
     case 'CHANGE_ROUTE':
-      document.getElementById('mapDiv').className = 'hideMap'
       return { ...state, lastRoute: state.route, route: payload, showMenu: false }
     case 'SHOW_MENU':
       return { ...state, showMenu: !state.showMenu }

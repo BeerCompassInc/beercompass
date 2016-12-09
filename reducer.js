@@ -8,7 +8,7 @@ module.exports = (state, { type, payload }) => {
       state.loginDetails[payload.change] = payload.value
       return { ...state }
     case 'NEW_USER_DETAILS':
-      state.newUserDetails[payload.change] = payload.value 
+      state.newUserDetails[payload.change] = payload.value
       return { ...state }
     default:
       return { ...state }

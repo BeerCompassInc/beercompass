@@ -19,8 +19,8 @@ module.exports = (state, dispatch) => {
     <div class='login'>
       ${header(state, dispatch)}
       <form>
-        <input onchange=${(e) => saveUsername(e) } type="text" placeholder="username"/>
-        <input onchange=${(e) => savePassword(e) } type="password" placeholder="password" />
+        <input onchange=${(e) => saveUsername(e) } type="text" placeholder="Username"/>
+        <input onchange=${(e) => savePassword(e) } type="password" placeholder="Password" />
         <button onclick=${(e) => login(e)} type="submit">Login</button>
       </form>
       <button onclick=${goToSignUp}>Create Account</button>

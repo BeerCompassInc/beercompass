@@ -6,12 +6,13 @@ body {
   max-height: 768px;
   font-family: "Raleway", sans-serif;
   font-weight: 600px;
+  font-size: 30px;
   color: #F7BA7B; }
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   font-family: "Palanquin Dark", sans-serif;
-  font-weight: 700px; }
+  font-size: 50px; }
 
 main {
   text-align: center; }
@@ -26,8 +27,6 @@ button {
 
 .header {
   display: flex; }
-  .header h1 {
-    font-size: 50px; }
   .header img {
     margin-top: 20px;
     width: 20%; }
@@ -78,5 +77,27 @@ button {
       fill: #F7BA7B; }
     .playContainer .play .poly {
       fill: #000; }
+
+.login input {
+  width: 90%;
+  background-color: #F7BA7B;
+  height: 13vh;
+  margin: 1vh;
+  font-size: 40px;
+  border: none;
+  font-weight: bold;
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  border-bottom: 2px solid grey; }
+.login button {
+  height: 10vh;
+  margin: 1vh;
+  font-size: 40px;
+  font-weight: bold;
+  font-family: "Palanquin Dark", sans-serif; }
+
+::-webkit-input-placeholder {
+  color: black;
+  font-family: "Raleway", sans-serif; }
 
 /*# sourceMappingURL=index.css.map */

@@ -1,5 +1,5 @@
 {
-  "name": "quickstart",
+  "name": "beercompass",
   "version": "1.0.0",
   "description": "yoyo redux",
   "main": "index.js",
@@ -20,14 +20,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/bradymat/quickstart"
+    "url": "https://github.com/beercompassinc/beercompass"
   },
-  "author": "bradymat",
+  "author": "beercompassinc",
   "license": "Motosoto",
   "bugs": {
-    "url": "https://github.com/bradymat/quickstart/issues"
+    "url": "https://github.com/beercompassinc/beercompass/issues"
   },
-  "homepage": "https://github.com/bradymat/quickstart",
+  "homepage": "https://github.com/beercompassinc/beercompass",
   "devDependencies": {
     "babel-plugin-transform-object-rest-spread": "^6.19.0",
     "babel-preset-es2015": "^6.5.0",

@@ -3,7 +3,7 @@ import header from './header'
 import link from './buttons/link'
 
 module.exports = (state, dispatch) => {
-  
+
   const saveUsername = (e) => dispatch({type: 'NEW_USER_DETAILS', payload: {change: 'username', value: e.target.value}})
 
   const savePassword = (e) => dispatch({type: 'NEW_USER_DETAILS', payload: {change: 'password', value: e.target.value}})

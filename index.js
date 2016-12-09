@@ -17,7 +17,8 @@ const initState = {
   title: 'Quickstart',
   route: '/',
   lastRoute: 'lemon',
-  loginDetails: null
+  loginDetails: {},
+  newUserDetails: {}
 }
 
 const { getState, dispatch, subscribe } = createStore(reducer, initState)

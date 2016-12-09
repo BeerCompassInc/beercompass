@@ -1,16 +1,16 @@
-const GoogleMapsLoader = require('google-maps')
+import GoogleMapsLoader from 'google-maps'
 
-function getMap(el){
-  console.log('element', el);
+GoogleMapsLoader.KEY = 'AIzaSyDNqZpfY5wCQjq78QqttpZJ05714XxQTuI'
+GoogleMapsLoader.LIBRARIES = ['geometry', 'places']
 
-  GoogleMapsLoader.KEY = 'AIzaSyDNqZpfY5wCQjq78QqttpZJ05714XxQTuI'
-  GoogleMapsLoader.load(function(google) {
-      new google.maps.Map(el, {
-             zoom: 4,
-             center: {lat: 34, lng: -40.605}
-           })
-      console.log(google.maps)
+module.exports = (el) => {
+  GoogleMapsLoader.load((google) => {
+    new google.maps.Map(el, {
+       zoom: 4,
+       center: {
+         lat: 40.7128,
+         lng: 74.0059
+       }
+    })
   })
 }
-
-module.exports = getMap

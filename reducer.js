@@ -1,6 +1,7 @@
 module.exports = (state, { type, payload }) => {
   switch (type) {
     case 'CHANGE_ROUTE':
+      document.getElementById('mapDiv').className = 'hideMap'
       return { ...state, lastRoute: state.route, route: payload, showMenu: false }
     case 'SHOW_MENU':
       return { ...state, showMenu: !state.showMenu }
@@ -8,7 +9,7 @@ module.exports = (state, { type, payload }) => {
       state.loginDetails[payload.change] = payload.value
       return { ...state }
     case 'NEW_USER_DETAILS':
-      state.newUserDetails[payload.change] = payload.value 
+      state.newUserDetails[payload.change] = payload.value
       return { ...state }
     default:
       return { ...state }

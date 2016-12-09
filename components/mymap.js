@@ -2,21 +2,24 @@ import html from 'yo-yo'
 import header from './header'
 import button from './buttons/custom'
 import link from './buttons/link'
-import request from 'superagent'
+import GoogleMapsLoader from 'google-maps' // only for common js environments
 
 module.exports = (state, dispatch) => {
 
-  request
-    .get('https://maps.googleapis.com/maps/api/js?key=AIzaSyDNqZpfY5wCQjq78QqttpZJ05714XxQTuI&callback=initMap')
-    .end((err, res) => {
-      var map;
-      function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: -34.397, lng: 150.644},
-          zoom: 8
-        })
-      }
-    })
+
+
+  GoogleMapsLoader.load(function(google) {
+      new google.maps.Map(
+        GoogleMapsLoader.KEY = 'AIzaSyDNqZpfY5wCQjq78QqttpZJ05714XxQTuI'
+
+      )
+      GoogleMapsLoader.LIBRARIES = [{
+       zoom: 4,
+       center: {lat: 34, lng: -40.605}
+     }]
+
+  })
+
 
   return html`
     <div>
